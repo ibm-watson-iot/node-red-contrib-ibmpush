@@ -27,10 +27,11 @@ Type of notification to be pushed.
 - Broadcast - Send notifications to all the registered devices
 - By Tags - Send notifications to devices subscribed to that tag. Can take multiple values seperated by comma(,)
 - By DeviceIds - Send notifications to devices by their device ID. Can take multiple values seperated by comma(,)
+- By User Ids - Send notifications to devices by their User ID. Can take multiple values seperated by comma(,)
 - Only Android devices - Send notifications to all the registered Android devices
 - Only iOS devices - Send notifications to all the registered iOS devices
 
-*Notification Identifiers* - Used when notifications are sent *By Tags and By DeviceIds*. This can take multiple values seperated by comma(,). Example: GoldCoupons,SilverCoupons. You can override this property by providing ```msg.identifiers```
+*Notification Identifiers* - Used when notifications are sent *By Tags , By User Ids and By DeviceIds*. This can take multiple values seperated by comma(,). Example: GoldCoupons,SilverCoupons. You can override this property by providing ```msg.identifiers```
 
 Visit this [link](https://console.ng.bluemix.net/docs/services/mobilepush/c_overview_push.html) for more information on IBM Push Notification for Bluemix
 
