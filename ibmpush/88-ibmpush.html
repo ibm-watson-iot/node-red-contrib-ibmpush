@@ -50,6 +50,7 @@
             <option default value="broadcast">Broadcast</option>
             <option value="tags">By Tags</option>
             <option value="deviceid">By DeviceIds</option>
+            <option value="userid">By User Ids</option>
             <option value="android">Only Android devices</option>
             <option value="ios">Only iOS devices</option>
         </select>
@@ -91,13 +92,14 @@
             <li><i>Broadcast</i> - Send notifications to all the registered devices</li>
             <li><i>By Tags</i> - Send notifications to devices subscribed to that tag. Can take multiple values seperated by comma(,)</li>
             <li><i>By DeviceIds</i> - Send notifications to devices by their device ID. Can take multiple values seperated by comma(,)</li>
+            <li><i>By User Ids</i> - Send notifications to devices by their User ID. Can take multiple values seperated by comma(,)</li>
             <li><i>Only Android devices</i> - Send notifications to all the registered Android devices</li>
             <li><i>Only iOS devices</i> - Send notifications to all the registered iOS devices</li>
 
         </ul>
     </p>
 
-    <p><b>Notification Identifiers</b> Used when notifications are sent <i>By Tags and By DeviceIds</i>. This can take multiple values seperated by comma(,). Example: GoldCoupons,SilverCoupons. You can override this property by providing <code>msg.identifiers</code></p>
+    <p><b>Notification Identifiers</b> Used when notifications are sent <i>By Tags, By DeviceIds and User Ids</i>. This can take multiple values seperated by comma(,). Example: GoldCoupons,SilverCoupons. You can override this property by providing <code>msg.identifiers</code></p>
 
     <p> Visit this <a target="_blank" href="https://console.ng.bluemix.net/docs/services/mobilepush/c_overview_push.html">link</a> for more information on IBM Push Notification for Bluemix
 

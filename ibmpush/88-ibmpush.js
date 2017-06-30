@@ -166,6 +166,13 @@ function IBMPushNode(n) {
 				invokePush(this.mode,message,this);
 				break;
 
+			case "userid":
+				message.target = {
+					"userIds": ids
+				}
+				invokePush(this.mode,message,this);
+				break;
+
 			case "android":
 				message.target = {
 					"platforms":["G"]
