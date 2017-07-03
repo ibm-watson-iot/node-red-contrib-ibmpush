@@ -95,7 +95,7 @@ function IBMPushNode(n) {
 							+ "Input Bluemix Application related properties - ID and Secret.");
 			return null;
 		}
-		applicationUrl = "http://imfpush.ng.bluemix.net/imfpush/v1/apps/"+n.ApplicationID;
+		applicationUrl = "http://imfpush."+ n.ApplicationRegion +".bluemix.net/imfpush/v1/apps/"+n.ApplicationID;
 		applicationSecret = credentials.password;
 	} else {
 		this.log("In Local Environment");
@@ -105,7 +105,7 @@ function IBMPushNode(n) {
 							+ "Input Bluemix Application related properties - ID and Secret.");
 			return null;
 		}
-		applicationUrl = "http://imfpush.ng.bluemix.net/imfpush/v1/apps/"+n.ApplicationID;
+		applicationUrl = "http://imfpush."+ n.ApplicationRegion +".bluemix.net/imfpush/v1/apps/"+n.ApplicationID;
 		applicationSecret = credentials.password;
 	}
 
