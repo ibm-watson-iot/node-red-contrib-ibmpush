@@ -39,7 +39,15 @@
             <label for="node-input-ApplicationSecret"><i class="icon-lock"></i> Secret</label>
             <input type="password" id="node-input-ApplicationSecret" placeholder="Application Secret">
         </div>
-
+        <div class="form-row">
+            <label for="node-input-ApplicationRegion"><i class="icon-map-marker"></i> Secret</label>
+            <select id="node-input-ApplicationRegion" style="margin-right:3px;">
+                <option default value="ng">US South</option>
+                <option value="eu-gb">United Kingdom</option>
+                <option value="au-syd">Sydney</option>
+                <option value="eu-de">Germany</option>
+            </select>
+        </div>
         <br/>
     </div>
     <b>Notification</b>
@@ -76,8 +84,6 @@
 
 </script>
 
-
-
 <script type="text/x-red" data-help-name="ibmpush">
     <p>Sends Push Notifications to mobile devices using IBM Push notification for Bluemix</p>
     <p><code>msg.payload</code> is used as the alert in the Notification.
@@ -87,6 +93,7 @@
     <p> <b>Application ID and Secret</b> mandatory only when used in <i>non-Bluemix environment</i> and must be copied from the IBM Push Notification service in Bluemix.
     If used in <i>Bluemix</i>, these properties will be automatically read.</p>
 
+    <p> <b>Application Region</b>  The Region of Bluemix on which the IBM Push Notification Service is created. Available Regions - US South, United Kingdom, Germany and Sydney</p>
     <p><b>Notification Type</b> Type of notification to be pushed.
         <ul>
             <li><i>Broadcast</i> - Send notifications to all the registered devices</li>
@@ -116,7 +123,8 @@
             //ApplicationSecret: {value:"", required:true},
             identifiers: {value:""},
             notification: {value:"broadcast"},
-            mode: {value:"SANDBOX"}
+            mode: {value:"SANDBOX"},
+            ApplicationRegion : {value:"ng"}
         },
         inputs:1,
         outputs:0,
